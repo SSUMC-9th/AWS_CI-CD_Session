@@ -25,7 +25,7 @@ GitHub Actions + Docker + AWS EC2를 활용한 CI/CD 파이프라인 샘플 프�
 ## 기술 스택
 
 - Java 17
-- Spring Boot 3.2
+- Spring Boot 3.5.9
 - Gradle 8.5
 - MySQL (AWS RDS)
 - Docker
@@ -37,16 +37,15 @@ GitHub Actions + Docker + AWS EC2를 활용한 CI/CD 파이프라인 샘플 프�
 
 Repository → Settings → Secrets and variables → Actions에서 아래 값들을 등록하세요.
 
-| Secret Name | 설명 | 예시 |
-|------------|------|------|
+| Secret Name       | 설명 | 예시 |
+|-------------------|------|------|
 | `DOCKER_USERNAME` | Docker Hub 사용자명 | `myusername` |
 | `DOCKER_PASSWORD` | Docker Hub 비밀번호 | `mypassword` |
-| `EC2_HOST` | EC2 퍼블릭 IP | `3.35.xxx.xxx` |
-| `EC2_SSH_KEY` | EC2 SSH 프라이빗 키 (.pem 내용 전체) | `-----BEGIN RSA...` |
-| `DB_HOST` | RDS 엔드포인트 | `mydb.xxxxx.ap-northeast-2.rds.amazonaws.com` |
-| `DB_NAME` | 데이터베이스 이름 | `demo` |
-| `DB_USERNAME` | DB 사용자명 | `admin` |
-| `DB_PASSWORD` | DB 비밀번호 | `mydbpassword` |
+| `EC2_HOST`        | EC2 퍼블릭 IP | `3.35.xxx.xxx` |
+| `EC2_SSH_KEY`     | EC2 SSH 프라이빗 키 (.pem 내용 전체) | `-----BEGIN RSA...` |
+| `DB_URL`          | JDBC URL | `jdbc:mysql://mydb.xxxxx.ap-northeast-2.rds.amazonaws.com:3306/demo` |
+| `DB_USERNAME`     | DB 사용자명 | `admin` |
+| `DB_PASSWORD`     | DB 비밀번호 | `mydbpassword` |
 
 ---
 
